@@ -18,6 +18,7 @@ namespace PvTests.ViewModels
             GetProductCommand = new CommandBase(async e => await GetProductProcess());
             GetProductCommand.Execute(null);
             SellList = new List<SubSellModel>();
+            Quantity = 1;
         }
 
         public CommandBase AddSellCommand { get; set; }
@@ -63,10 +64,24 @@ namespace PvTests.ViewModels
             get { return quantity; }
             set { quantity = value; }
         }
-        
+
+        private string totalString;
+
+        public string TotalString
+        {
+            get { return totalString; }
+            set { totalString = value; OnPropertyChanged(); }
+        }
+
+        decimal Total { get; set; }
+
         public async Task SendSellProcess()
         {
-
+            SellRequest sellRequest = new SellRequest();
+            var sellModel = new SellModel() { UserId = 1, SubSellList = SellList };
+            var result = await sellRequest.AddSell(sellModel);
+            SellList = new List<SubSellModel>();
+            Total = 0;
         }
 
         public async Task GetProductProcess()
@@ -80,8 +95,12 @@ namespace PvTests.ViewModels
         {
             ProductModel product = ProductList.Where(e => e.Description.Equals(ProductSelected)).FirstOrDefault();
             decimal total = product.Price * Quantity;
+            Total += total;
+            TotalString = $"Total: {Total}";
             SellList.Add(new SubSellModel() { Description = product.Description, Quantity = Quantity, ProductId = product.ProductId, Total = total });
             SellList = SellList.ToList();
+            ProductSelected = "";
+            Quantity = 1;
         }
     }
 }

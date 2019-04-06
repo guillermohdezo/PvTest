@@ -8,6 +8,7 @@
         Title="Menu" Height="380.639" Width="734.023">
     <Grid>
         <Button Content="Nueva Venta" HorizontalAlignment="Left" Height="86" Margin="90,125,0,0" VerticalAlignment="Top" Width="216" Click="Button_Click"/>
-        <Button Content="Ventas" HorizontalAlignment="Left" Height="86" Margin="435,125,0,0" VerticalAlignment="Top" Width="216"/>
+        <Button Content="Ventas" HorizontalAlignment="Left" Height="86" Margin="435,125,0,0" VerticalAlignment="Top" Width="216" Click="Button_Click_2"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Margin="90,46,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
     </Grid>
 </Window>

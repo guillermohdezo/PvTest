@@ -19,14 +19,17 @@ namespace PvTests.Views
     /// </summary>
     public partial class UserMenuView : Window
     {
-        public UserMenuView()
+        public List<Window> Windows;
+        public UserMenuView(List<Window> windows)
         {
             InitializeComponent();
+            Windows = windows;
+            Windows.Add(this);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SellsView sellsView = new SellsView();
+            SellsView sellsView = new SellsView(Windows);
             sellsView.Show();
             this.Hide();
         }
@@ -35,6 +38,20 @@ namespace PvTests.Views
         {
             base.OnClosed(e);
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Windows.Remove(this);
+            Windows.LastOrDefault().Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SellsListView sellsView = new SellsListView(Windows);
+            sellsView.Show();
+            this.Hide();
         }
     }
 }

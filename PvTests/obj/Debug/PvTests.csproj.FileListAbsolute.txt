@@ -46,3 +46,15 @@ C:\PvTest\PvTests\obj\Debug\Views\UserMenuView.baml
 C:\PvTest\PvTests\obj\Debug\PvTests.csproj.CopyComplete
 C:\PvTest\PvTests\obj\Debug\Views\AdminMenuView.g.cs
 C:\PvTest\PvTests\obj\Debug\Views\AdminMenuView.baml
+C:\Users\guill\source\repos\PvTests\PvTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\guill\source\repos\PvTests\PvTests\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\guill\source\repos\PvTests\PvTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\AdminMenuView.g.cs
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\UserMenuView.g.cs
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\AdminMenuView.baml
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\UserMenuView.baml
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\PvTests.csproj.CopyComplete
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\AddProductView.g.cs
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\AddProductView.baml
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\EditProductView.g.cs
+C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\EditProductView.baml

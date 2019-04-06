@@ -22,9 +22,11 @@ namespace PvTests
     /// </summary>
     public partial class Login : Window
     {
+        public List<Window> Windows = new List<Window>();
         public Login()
         {
             InitializeComponent();
+            Windows.Add(this);
         }
 
         protected override void OnInitialized(EventArgs e)

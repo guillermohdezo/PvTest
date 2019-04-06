@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PvTests.Views
 {
     /// <summary>
-    /// Lógica de interacción para SellsView.xaml
+    /// Lógica de interacción para AddProduct.xaml
     /// </summary>
-    public partial class SellsView : Window
+    public partial class AddProductView : Window
     {
-        public SellsView(List<Window> Windows)
+        public AddProductView(List<Window> Windows)
         {
             InitializeComponent();
             this.Windows = Windows;
