@@ -1,0 +1,13 @@
+﻿<Window x:Class="PvTests.Views.UserMenuView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PvTests.Views"
+        mc:Ignorable="d"
+        Title="Menu" Height="380.639" Width="734.023">
+    <Grid>
+        <Button Content="Nueva Venta" HorizontalAlignment="Left" Height="86" Margin="90,125,0,0" VerticalAlignment="Top" Width="216" Click="Button_Click"/>
+        <Button Content="Ventas" HorizontalAlignment="Left" Height="86" Margin="435,125,0,0" VerticalAlignment="Top" Width="216"/>
+    </Grid>
+</Window>

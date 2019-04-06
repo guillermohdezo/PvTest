@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:PvTests"
         xmlns:viewmodel="clr-namespace:PvTests.ViewModels"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Inicio de Sesion" Height="150.986" Width="348.025">
     <Window.Resources>
         <viewmodel:LoginViewModel x:Key="loginViewModel" />
     </Window.Resources>
     <Grid DataContext="{StaticResource loginViewModel}" Margin="0,0,2,-21" RenderTransformOrigin="0.488,0.47">
-        <Label Content="Nombre del usuario" HorizontalAlignment="Center" Margin="10,30,221,0" VerticalAlignment="Top" Width="116"/>
+        <Label Content="Nombre del usuario" HorizontalAlignment="Center" Margin="15,30,207,0" VerticalAlignment="Top" Width="116" Height="23"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="131,30,0,0" TextWrapping="Wrap" Text="{Binding UserName}" VerticalAlignment="Top" Width="160"/>
         <Button Content="Entrar" HorizontalAlignment="Left" Margin="216,72,0,0" VerticalAlignment="Top" Width="75" Command="{Binding LoginCommand}"/>
     </Grid>

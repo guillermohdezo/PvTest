@@ -1,4 +1,5 @@
-﻿using PvTests.Views;
+﻿using PvTests.ViewModels;
+using PvTests.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,12 @@ namespace PvTests
         public Login()
         {
             InitializeComponent();
+        }
+
+        protected override void OnInitialized(EventArgs e)
+        {
+            base.OnInitialized(e);
+            ((LoginViewModel)this.FindResource("loginViewModel")).View = this;
         }
     }
 }

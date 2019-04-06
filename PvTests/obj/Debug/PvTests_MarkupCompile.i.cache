@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\
+C:\PvTest\PvTests\obj\Debug\
 PvTests
 none
 false
 DEBUG;TRACE
-C:\Users\guill\source\repos\PvTests\PvTests\App.xaml
-31764429429
+C:\PvTest\PvTests\App.xaml
+5-1871212821
 
-14-1005690284
-131569487696
-Login.xaml;Views\SellsListView.xaml;Views\SellsView.xaml;
+27-278004884
+14101072736
+Login.xaml;Views\AdminMenuView.xaml;Views\SellsListView.xaml;Views\SellsView.xaml;Views\UserMenuView.xaml;
 
-True
+False
 

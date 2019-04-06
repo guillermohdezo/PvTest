@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -70,14 +73,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Business\HttpRequest\LoginRequest.cs" />
+    <Compile Include="Business\HttpRequest\SellRequest.cs" />
+    <Compile Include="Business\Http\HttpClientRest.cs" />
     <Compile Include="Models\BaseObject\CommandBase.cs" />
     <Compile Include="Models\BaseObject\ObservableObject.cs" />
+    <Compile Include="Models\Constant\ConnectionProp.cs" />
+    <Compile Include="Models\Entity\LoginResponce.cs" />
+    <Compile Include="Models\Entity\SellModel.cs" />
+    <Compile Include="Models\Entity\SubSellModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\AdminMenuView.xaml.cs">
+      <DependentUpon>AdminMenuView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SellsListView.xaml.cs">
       <DependentUpon>SellsListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SellsView.xaml.cs">
       <DependentUpon>SellsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserMenuView.xaml.cs">
+      <DependentUpon>UserMenuView.xaml</DependentUpon>
     </Compile>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -91,11 +107,19 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AdminMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SellsListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SellsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,6 +142,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,9 +151,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
