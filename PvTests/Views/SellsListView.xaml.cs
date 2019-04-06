@@ -19,9 +19,19 @@ namespace PvTests.Views
     /// </summary>
     public partial class SellsListView : Window
     {
-        public SellsListView()
+        public SellsListView(List<Window> Windows)
         {
             InitializeComponent();
+            this.Windows = Windows;
+        }
+
+        public List<Window> Windows = new List<Window>();
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Windows.Remove(this);
+            Windows.LastOrDefault().Show();
         }
     }
 }

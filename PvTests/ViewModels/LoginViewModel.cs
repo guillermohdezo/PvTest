@@ -42,18 +42,18 @@ namespace PvTests.ViewModels
             if (!string.IsNullOrEmpty(UserName))
             {
                 LoginRequest request = new LoginRequest();
-                LoginResponce loginResponce = new LoginResponce() { State = true, Type = "User" }; //await request.LoginCheck(UserName);
+                LoginResponce loginResponce = new LoginResponce() { State = true, Type = "Admin" }; //await request.LoginCheck(UserName);
                 if (loginResponce.State)
                 {
                     View.Hide();
                     if (loginResponce.Type.Equals("Admin"))
                     {
-                        AdminMenuView adminMenu = new AdminMenuView();
+                        AdminMenuView adminMenu = new AdminMenuView((View as Login).Windows);
                         adminMenu.Show();
                     }
                     else
                     {
-                        UserMenuView userMenu = new UserMenuView();
+                        UserMenuView userMenu = new UserMenuView((View as Login).Windows);
                         userMenu.Show();
                     }
                 }

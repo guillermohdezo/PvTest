@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PvTests.Views"
         xmlns:viewmodel="clr-namespace:PvTests.ViewModels"
         mc:Ignorable="d"
-        Title="Venta" Height="346.472" Width="356.982">
+        Title="Venta" Height="358.629" Width="371.418">
     <Window.Resources>
         <viewmodel:SellViewModel x:Key="sellViewModel" />
     </Window.Resources>
@@ -16,7 +16,7 @@
         <Label Content="Cantidad" HorizontalAlignment="Left" Margin="24,44,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="87,44,0,0" TextWrapping="Wrap" Text="{Binding Quantity}" VerticalAlignment="Top" Width="142"/>
         <Button Content="Agregar" HorizontalAlignment="Left" Margin="245,44,0,0" VerticalAlignment="Top" Width="75" Height="23" Command="{Binding AddSellCommand}"/>
-        <ListView Margin="24,75,15,29" ItemsSource="{Binding SellList}">
+        <ListView Margin="24,75,29,42" ItemsSource="{Binding SellList}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Producto" Width="130" 
@@ -29,5 +29,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        
+        <Button Content="Pagar" HorizontalAlignment="Left" Height="24" Margin="245,289,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="{Binding TotalString}" HorizontalAlignment="Left" Margin="24,290,0,0" VerticalAlignment="Top" Height="23" Width="136"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Margin="24,290,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PvTests.Views
 {
     /// <summary>
-    /// Lógica de interacción para SellsView.xaml
+    /// Lógica de interacción para EditProductView.xaml
     /// </summary>
-    public partial class SellsView : Window
+    public partial class EditProductView : Window
     {
-        public SellsView(List<Window> Windows)
+        public EditProductView(List<Window> Windows)
         {
             InitializeComponent();
             this.Windows = Windows;
@@ -27,7 +27,7 @@ namespace PvTests.Views
 
         public List<Window> Windows = new List<Window>();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Hide();
             Windows.Remove(this);

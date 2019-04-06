@@ -41,5 +41,13 @@ namespace PvTests.Business.HttpRequest
             result = JsonConvert.DeserializeObject<List<ProductModel>>(stringResult);
             return result;
         }
+
+        public async Task<List<DepResponce>> GetDep()
+        {
+            List<DepResponce> result = new List<DepResponce>();
+            string stringResult = await Client.Get("sell/getDep");
+            result = JsonConvert.DeserializeObject<List<DepResponce>>(stringResult);
+            return result;
+        }
     }
 }
