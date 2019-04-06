@@ -13,13 +13,14 @@
     <Grid DataContext="{StaticResource editProductViewModel}">
         <Button Content="Regresar" HorizontalAlignment="Left" Margin="18,22,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Label Content="Producto" HorizontalAlignment="Left" Margin="30,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.452,1.277"/>
-        <ComboBox HorizontalAlignment="Left" Margin="122,82,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="122,82,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding ProductStringList}" SelectedValue="{Binding ProductSelected}"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="30,106,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="122,109,0,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" Width="120"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="122,137,0,0" TextWrapping="Wrap" Text="{Binding Price}" VerticalAlignment="Top" Width="120"/>
         <Label Content="Departamento" HorizontalAlignment="Left" Margin="30,161,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="122,165,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="122,165,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding StringDepList}" SelectedValue="{Binding StringDep}"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="167,192,0,0" VerticalAlignment="Top" Width="75" Command="{Binding EditProductCommand}"/>
 
     </Grid>
 </Window>

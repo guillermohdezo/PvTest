@@ -58,3 +58,7 @@ C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\AddProductView.g.cs
 C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\AddProductView.baml
 C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\EditProductView.g.cs
 C:\Users\guill\source\repos\PvTests\PvTests\obj\Debug\Views\EditProductView.baml
+C:\PvTest\PvTests\obj\Debug\Views\AddProductView.g.cs
+C:\PvTest\PvTests\obj\Debug\Views\EditProductView.g.cs
+C:\PvTest\PvTests\obj\Debug\Views\AddProductView.baml
+C:\PvTest\PvTests\obj\Debug\Views\EditProductView.baml
