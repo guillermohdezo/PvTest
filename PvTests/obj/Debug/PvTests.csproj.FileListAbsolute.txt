@@ -44,3 +44,5 @@ C:\PvTest\PvTests\bin\Debug\Newtonsoft.Json.xml
 C:\PvTest\PvTests\obj\Debug\Views\UserMenuView.g.cs
 C:\PvTest\PvTests\obj\Debug\Views\UserMenuView.baml
 C:\PvTest\PvTests\obj\Debug\PvTests.csproj.CopyComplete
+C:\PvTest\PvTests\obj\Debug\Views\AdminMenuView.g.cs
+C:\PvTest\PvTests\obj\Debug\Views\AdminMenuView.baml

@@ -4,14 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PvTests.Views"
+        xmlns:viewmodel="clr-namespace:PvTests.ViewModels"
         mc:Ignorable="d"
-        Title="Venta" Height="325.659" Width="366.776">
-    <Grid Margin="0,0,2,0">
+        Title="Venta" Height="346.472" Width="356.982">
+    <Window.Resources>
+        <viewmodel:SellViewModel x:Key="sellViewModel" />
+    </Window.Resources>
+    <Grid Margin="0,0,14,2" DataContext="{StaticResource sellViewModel}">
         <Label Content="Producto" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="87,14,0,0" VerticalAlignment="Top" Width="142"/>
+        <ComboBox HorizontalAlignment="Left" Margin="87,14,0,0" VerticalAlignment="Top" Width="142" ItemsSource="{Binding ProductStringList}" SelectedValue="{Binding ProductSelected}"/>
         <Label Content="Cantidad" HorizontalAlignment="Left" Margin="24,44,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142"/>
-        <Button Content="Agregar" HorizontalAlignment="Left" Margin="245,44,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
-        <ListBox HorizontalAlignment="Left" Height="191" Margin="87,75,0,0" VerticalAlignment="Top" Width="233"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,44,0,0" TextWrapping="Wrap" Text="{Binding Quantity}" VerticalAlignment="Top" Width="142"/>
+        <Button Content="Agregar" HorizontalAlignment="Left" Margin="245,44,0,0" VerticalAlignment="Top" Width="75" Height="23" Command="{Binding AddSellCommand}"/>
+        <ListView Margin="24,75,15,29" ItemsSource="{Binding SellList}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Producto" Width="130" 
+                  DisplayMemberBinding="{Binding Description}" >
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Quantity}" 
+                  Header="Cantidad" Width="60"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Total}" 
+                  Header="Total" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

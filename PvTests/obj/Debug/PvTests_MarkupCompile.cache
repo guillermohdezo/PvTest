@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\PvTest\PvTests\App.xaml
-41443052462
+5-1871212821
 
-15-1632808309
+241740466808
 14101072736
-Login.xaml;Views\SellsListView.xaml;Views\SellsView.xaml;Views\UserMenuView.xaml;
+Login.xaml;Views\AdminMenuView.xaml;Views\SellsListView.xaml;Views\SellsView.xaml;Views\UserMenuView.xaml;
 
 False
 

@@ -48,7 +48,8 @@ namespace PvTests.ViewModels
                     View.Hide();
                     if (loginResponce.Type.Equals("Admin"))
                     {
-                        
+                        AdminMenuView adminMenu = new AdminMenuView();
+                        adminMenu.Show();
                     }
                     else
                     {

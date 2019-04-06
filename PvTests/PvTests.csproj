@@ -74,15 +74,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Business\HttpRequest\LoginRequest.cs" />
+    <Compile Include="Business\HttpRequest\ProductRequest.cs" />
     <Compile Include="Business\HttpRequest\SellRequest.cs" />
     <Compile Include="Business\Http\HttpClientRest.cs" />
     <Compile Include="Models\BaseObject\CommandBase.cs" />
     <Compile Include="Models\BaseObject\ObservableObject.cs" />
     <Compile Include="Models\Constant\ConnectionProp.cs" />
     <Compile Include="Models\Entity\LoginResponce.cs" />
+    <Compile Include="Models\Entity\ProductModel.cs" />
+    <Compile Include="Models\Entity\SellListResult.cs" />
     <Compile Include="Models\Entity\SellModel.cs" />
+    <Compile Include="Models\Entity\SellResult.cs" />
     <Compile Include="Models\Entity\SubSellModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\SellViewModel.cs" />
     <Compile Include="Views\AdminMenuView.xaml.cs">
       <DependentUpon>AdminMenuView.xaml</DependentUpon>
     </Compile>

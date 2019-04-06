@@ -26,11 +26,11 @@ namespace PvTests.Business.HttpRequest
             return result;
         }
 
-        public async Task<SellListResult> GetSell()
+        public async Task<List<SellListResult>> GetSell()
         {
-            SellListResult result = new SellListResult();
+            List<SellListResult> result = new List<SellListResult>();
             string stringResult = await Client.Get("sell/getSell");
-            result = JsonConvert.DeserializeObject<SellListResult>(stringResult);
+            result = JsonConvert.DeserializeObject<List<SellListResult>>(stringResult);
             return result;
         }
     }

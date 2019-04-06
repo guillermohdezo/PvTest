@@ -34,11 +34,11 @@ namespace PvTests.Business.HttpRequest
             return result;
         }
 
-        public async Task<ProductModel> GetProduct()
+        public async Task<List<ProductModel>> GetProduct()
         {
-            ProductModel result = new ProductModel();
+            List<ProductModel> result = new List<ProductModel>();
             string stringResult = await Client.Get("sell/getProduct");
-            result = JsonConvert.DeserializeObject<ProductModel>(stringResult);
+            result = JsonConvert.DeserializeObject<List<ProductModel>>(stringResult);
             return result;
         }
     }
