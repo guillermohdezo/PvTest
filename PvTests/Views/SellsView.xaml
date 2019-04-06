@@ -1,0 +1,17 @@
+﻿<Window x:Class="PvTests.Views.SellsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PvTests.Views"
+        mc:Ignorable="d"
+        Title="Venta" Height="325.659" Width="366.776">
+    <Grid Margin="0,0,2,0">
+        <Label Content="Producto" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="87,14,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Cantidad" HorizontalAlignment="Left" Margin="24,44,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142"/>
+        <Button Content="Agregar" HorizontalAlignment="Left" Margin="245,44,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <ListBox HorizontalAlignment="Left" Height="191" Margin="87,75,0,0" VerticalAlignment="Top" Width="233"/>
+    </Grid>
+</Window>
