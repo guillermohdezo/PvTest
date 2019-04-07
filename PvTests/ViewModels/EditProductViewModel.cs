@@ -66,11 +66,14 @@ namespace PvTests.ViewModels
 
         private void SelectProduct(string value)
         {
-            ProductModelSelected = ProductList.Where(e => e.Description.Equals(value)).FirstOrDefault();
-            Description = ProductModelSelected.Description;
-            Price = ProductModelSelected.Price;
-            var dep = DepResponcesList.Where(e => e.DepId == ProductModelSelected.DepartmentId).FirstOrDefault();
-            StringDep = dep.Description;
+            if (!string.IsNullOrEmpty(value))
+            {
+                ProductModelSelected = ProductList.Where(e => e.Description.Equals(value)).FirstOrDefault();
+                Description = ProductModelSelected.Description;
+                Price = ProductModelSelected.Price;
+                var dep = DepResponcesList.Where(e => e.DepId == ProductModelSelected.DepartmentId).FirstOrDefault();
+                StringDep = dep.Description;
+            }
         }
 
         private string description;
@@ -96,14 +99,14 @@ namespace PvTests.ViewModels
         public async Task GetProductProcess()
         {
             ProductRequest productRequest = new ProductRequest();
-            ProductList = new List<ProductModel>() { new ProductModel() { DepartmentId = 1, Description = "Sopa", Price = 5, ProductId = 1 } }; //await productRequest.GetProduct();
+            ProductList = await productRequest.GetProduct();
             ProductStringList = ProductList.Select(e => e.Description).ToList();
         }
 
         public async Task GetDepProcess()
         {
             ProductRequest productRequest = new ProductRequest();
-            DepResponcesList = new List<DepResponce>() { new DepResponce() { DepId = 1, Description = "Fruteria" } }; //await productRequest.GetDep();
+            DepResponcesList = await productRequest.GetDep();
             StringDepList = DepResponcesList.Select(e => e.Description).ToList();
         }
 
@@ -113,6 +116,7 @@ namespace PvTests.ViewModels
             ProductModel productModel = ProductList.Where(e => e.Description.Equals(ProductSelected)).FirstOrDefault();
             DepResponce depResponce = DepResponcesList.Where(e => e.Description.Equals(StringDep)).FirstOrDefault();
             await productRequest.EditProduct(new ProductModel() { DepartmentId = depResponce.DepId, Description = Description, Price = Price, ProductId = productModel.ProductId });
+            GetProductCommand.Execute(null);
         }
     }
 }

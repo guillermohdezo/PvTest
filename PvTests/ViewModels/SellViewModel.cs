@@ -87,7 +87,7 @@ namespace PvTests.ViewModels
         public async Task GetProductProcess()
         {
             ProductRequest productRequest = new ProductRequest();
-            ProductList = new List<ProductModel>() { new ProductModel() { DepartmentId = 1, Description = "Sopa", Price = 5, ProductId = 1 } }; //await productRequest.GetProduct();
+            ProductList = await productRequest.GetProduct();
             ProductStringList = ProductList.Select(e => e.Description).ToList();
         }
 

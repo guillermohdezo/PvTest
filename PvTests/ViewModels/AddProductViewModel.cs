@@ -28,12 +28,12 @@ namespace PvTests.ViewModels
             set { stringDepList = value; OnPropertyChanged(); }
         }
 
-        private string StringDep;
+        private string stringDep;
 
-        public string stringDep
+        public string StringDep
         {
-            get { return StringDep; }
-            set { StringDep = value; OnPropertyChanged(); }
+            get { return stringDep; }
+            set { stringDep = value; OnPropertyChanged(); }
         }
 
         private string description;
@@ -44,12 +44,12 @@ namespace PvTests.ViewModels
             set { description = value; }
         }
 
-        private decimal Price;
+        private decimal price;
 
-        public decimal price
+        public decimal Price
         {
-            get { return Price; }
-            set { Price = value; }
+            get { return price; }
+            set { price = value; }
         }
 
         public CommandBase AddProductCommand { get; set; }
@@ -59,13 +59,13 @@ namespace PvTests.ViewModels
         {
             ProductRequest productRequest = new ProductRequest();
             DepResponce depSelected = DepResponcesList.Where(e => e.Description.Equals(StringDep)).FirstOrDefault();
-            await productRequest.AddProduct(new ProductModel() { DepartmentId = depSelected.DepId, Description = Description, Price = Price });
+            await productRequest.AddProduct(new ProductModel() { DepartmentId = depSelected.DepId, Description = Description, Price = price });
         }
 
         public async Task GetDepProcess()
         {
             ProductRequest productRequest = new ProductRequest();
-            DepResponcesList = new List<DepResponce>() { new DepResponce() { DepId = 1, Description = "Fruteria" } }; //await productRequest.GetDep();
+            DepResponcesList = await productRequest.GetDep();
             StringDepList = DepResponcesList.Select(e => e.Description).ToList();
         }
     }

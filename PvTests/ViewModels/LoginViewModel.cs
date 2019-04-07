@@ -42,7 +42,7 @@ namespace PvTests.ViewModels
             if (!string.IsNullOrEmpty(UserName))
             {
                 LoginRequest request = new LoginRequest();
-                LoginResponce loginResponce = new LoginResponce() { State = true, Type = "Admin" }; //await request.LoginCheck(UserName);
+                LoginResponce loginResponce = await request.LoginCheck(UserName);
                 if (loginResponce.State)
                 {
                     View.Hide();

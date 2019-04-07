@@ -21,7 +21,7 @@ namespace PvTests.Business.HttpRequest
         public async Task<SellResult> AddProduct(ProductModel request)
         {
             SellResult result = new SellResult();
-            string stringResult = await Client.Post("sell/addProduct", JsonConvert.SerializeObject(request));
+            string stringResult = await Client.Post("Product/AddProduct", JsonConvert.SerializeObject(request));
             result = JsonConvert.DeserializeObject<SellResult>(stringResult);
             return result;
         }
@@ -29,7 +29,7 @@ namespace PvTests.Business.HttpRequest
         public async Task<SellResult> EditProduct(ProductModel request)
         {
             SellResult result = new SellResult();
-            string stringResult = await Client.Post("sell/addProduct", JsonConvert.SerializeObject(request));
+            string stringResult = await Client.Post("product/EditProduct", JsonConvert.SerializeObject(request));
             result = JsonConvert.DeserializeObject<SellResult>(stringResult);
             return result;
         }
@@ -37,7 +37,7 @@ namespace PvTests.Business.HttpRequest
         public async Task<List<ProductModel>> GetProduct()
         {
             List<ProductModel> result = new List<ProductModel>();
-            string stringResult = await Client.Get("sell/getProduct");
+            string stringResult = await Client.Get("product/getProduct");
             result = JsonConvert.DeserializeObject<List<ProductModel>>(stringResult);
             return result;
         }
@@ -45,7 +45,7 @@ namespace PvTests.Business.HttpRequest
         public async Task<List<DepResponce>> GetDep()
         {
             List<DepResponce> result = new List<DepResponce>();
-            string stringResult = await Client.Get("sell/getDep");
+            string stringResult = await Client.Get("product/getDep");
             result = JsonConvert.DeserializeObject<List<DepResponce>>(stringResult);
             return result;
         }

@@ -8,6 +8,6 @@ namespace PvTests.Models.Constant
 {
     public class ConnectionProp
     {
-        public static string UrlService = "http://localhost/";
+        public static string UrlService = "http://localhost:51021/";
     }
 }
